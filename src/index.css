@@ -1,13 +1,175 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Proxima+Nova");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background: #202020;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.icons_style {
+  color: white;
+  cursor: pointer;
+  width: 20px;
+  margin-right: 20px;
+  height: 20px;
+}
+
+.search-icon {
+  color: white;
+  cursor: pointer;
+  background: #747474;
+  height: 30px;
+}
+
+.search-text {
+  background: #121212;
+  color: white;
+  font-weight: lighter;
+  font-family: "Proxima Nova", sans-serif;
+  padding-left: 10px;
+  border-width: 0px;
+  outline: none;
+}
+
+.search-container {
+  min-height: 100%;
+  border-radius: 2px;
+  background: #121212;
+  flex-wrap: wrap;
+  display: flex;
+  align-content: stretch;
+  justify-content: space-between;
+  color: #747474;
+  min-width: 400px;
+  border: 2px solid #747474;
+  font-size: 16px;
+}
+
+.circular-image {
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 18px;
+  align-items: center;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container > div > h4 {
+  font-size: 16px;
+  color: white;
+  font-weight: bolder;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  overflow-x: hidden;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.sidenav a {
+  display: block;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #383838;
+  font-weight: lighter;
+  font-family: "Proxima Nova", sans-serif;
+  flex-grow: 1;
+}
+
+.sidenav a:hover {
+  background-color: #383838;
+}
+
+.active {
+  background-color: #383838;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+  height: 100%;
+  display: block;
+  background: #181818;
+}
+
+.title {
+  font-size: 18px;
+  color: white;
+  background: #181818;
+  font-weight: bold;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.news {
+  margin-bottom: 25px;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  cursor: pointer;
+  background: #383838;
+  position: relative;
+}
+
+#title {
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  background: #383838;
+  align-items: center;
+  color: white;
+  margin-left: 5px;
+  font-weight: bold;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  justify-content: space-between;
+}
+
+#description {
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  margin-left: 5px;
+  font-weight: lighter;
+  font-family: "Proxima Nova", sans-serif;
+  margin-right: 2px;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  background: #383838;
+  align-items: center;
+  color: white;
+  font-size: 13px;
+  justify-content: space-between;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  cursor: pointer;
+  color: white;
+  background: transparent;
 }
