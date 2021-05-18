@@ -49,7 +49,7 @@ body {
 
 .login-blue-div {
   flex: 1;
-  background: var(--clr-blue);
+  background: var(--clr-blue1);
   color: white;
   padding: 7%;
   border-radius: 20px 0px 0px 20px;
@@ -61,7 +61,7 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--clr-white);
-  color: var(--clr-blue);
+  color: var(--clr-blue1);
   align-items: center;
   border-radius: 0px 20px 20px 0px;
 }
@@ -86,8 +86,8 @@ body {
 
 .blue-horizontal-line {
   width: 40px;
-  border-top: 3px solid var(--clr-blue);
-  background: var(--clr-blue);
+  border-top: 3px solid var(--clr-blue1);
+  background: var(--clr-blue1);
   margin-top: 5px;
 }
 
@@ -109,7 +109,7 @@ body {
 }
 
 .login-white-div > form > button {
-  background: var(--clr-blue);
+  background: var(--clr-blue1);
   padding: 10px;
   border-radius: 45px;
   border: none;
