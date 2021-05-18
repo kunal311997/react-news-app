@@ -1,9 +1,8 @@
-import Home from './components/Home'
+import Home from './components/home/Home'
+import Login from './components/login/LoginPage'
 
 function App() {
-    return ( <
-        Home / >
-    )
+    return (<Login />)
 }
 
 export default App
