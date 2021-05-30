@@ -404,3 +404,22 @@ body {
 .category-item:hover {
   background: var(--clr-blue1);
 }
+.about-page {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  align-items: center;
+  background: var(--clr-background);
+}
+
+.about-page h1 {
+  color: var(--clr-blue2);
+}
+.about-page h2 {
+  color: var(--clr-grey-1);
+}
+
+.about-page p {
+  align-content: center;
+  color: #000000;
+}

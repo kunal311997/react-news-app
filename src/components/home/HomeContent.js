@@ -118,7 +118,7 @@ export default function HomeContent({ openNav, searchText,
     const onCategoryClicked = (c) => {
         setCategory(c)
         categoriesList.map((category) => (category.isSelected = false))
-        
+
         setCategoriesList(categoriesList.map((category) => category.id === c ? {
             ...category,
             isSelected: !category.isSelected
@@ -129,10 +129,7 @@ export default function HomeContent({ openNav, searchText,
         <div style={{ height: '100vh' }}>
             { <div className='sidenav' style={{ width: openNav ? '0px' : '220px' }}>
                 <a href="#" className="active">Top Headlines</a>
-                <a href="#">Favourites</a>
                 <a onClick={() => onNavigationItemClick('about')}>About</a>
-                <a href="#">Help</a>
-                <a href="#">Contact Us</a>
                 <a onClick={() => onNavigationItemClick('signout')} >Sign Out</a>
 
             </div>
