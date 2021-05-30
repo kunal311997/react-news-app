@@ -210,6 +210,7 @@ body {
 }
 
 .sidenav a {
+  cursor: pointer;
   display: block;
   color: white;
   font-size: 16px;
@@ -235,6 +236,7 @@ body {
   transition: margin-left 0.5s;
   padding: 16px;
   height: 100%;
+  align-content: center;
   background: var(--clr-blue3);
 }
 
@@ -242,15 +244,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   background: #e1edf6;
-  justify-content: space-between;
   margin: 10px;
 }
 
 .news-item-div {
+  margin-right: 10px;
   margin-bottom: 25px;
   border-radius: 10px;
   width: 250px;
-  height: 250px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   overflow: visible;
@@ -258,7 +260,6 @@ body {
   background: #c4d8e2;
   position: relative;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-
 }
 
 #title {
@@ -301,5 +302,105 @@ body {
   margin: 8px;
   cursor: pointer;
   color: white;
+  z-index: 1000;
   background: transparent;
+}
+
+.dialog {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.dialog-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.dialog-content h1 {
+  color: black;
+  font-size: 20px;
+}
+
+.dialog-content button {
+  color: var(--clr-blue2);
+  background: white;
+  font-size: 16px;
+  border: none;
+  font-weight: bolder;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.categories-main::-webkit-scrollbar {
+  display: none;
+}
+.categories-main {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+.category-item {
+  cursor: pointer;
+  color: white;
+  background: var(--clr-blue2);
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-transform: capitalize;
+  white-space: nowrap;
+  display: block;
+}
+
+.category-item:hover {
+  background: var(--clr-blue1);
 }
